@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>أساس الوسام — أدوات صحية وسباكة | الرياض</title>
+  <meta name="description" content="عرض منتجات أدوات السباكة من أساس الوسام — خلاطات، مواسير، وصلات، أدوات تركيب وخامات. توصيل داخل الرياض." />
+  <meta property="og:title" content="أساس الوسام — أدوات صحية وسباكة" />
+  <meta property="og:description" content="عرض منتجات أدوات السباكة من أساس الوسام — خلاطات، مواسير، وصلات، أدوات تركيب وخامات. توصيل داخل الرياض." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Play CDN -->
+  <script>
+    window.tailwind = {
+      config: {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#116677',
+              dark: '#333333'
+            },
+            fontFamily: {
+              sans: ['Cairo', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (scroll animations) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Swiper (mobile product slider) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2d9b5d6b7.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root{ --primary:#116677; --dark:#333333 }
+    html,body{height:100%}
+    .btn-primary{background:linear-gradient(90deg,var(--primary),#0e5560);}
+  </style>
+</head>
+<body class="bg-white text-dark font-sans antialiased">
+  <!-- NAVBAR -->
+  <header class="bg-white sticky top-0 z-40 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg bg-[var(--primary)] flex items-center justify-center text-white font-bold">أو</div>
+        <div>
+          <h1 class="text-lg font-bold text-[var(--dark)]">أساس الوسام</h1>
+          <p class="text-xs text-gray-500">أدوات صحية وسباكة - الرياض</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#products" class="text-sm hover:text-[var(--primary)]">المنتجات</a>
+        <a href="#features" class="text-sm hover:text-[var(--primary)]">خدماتنا</a>
+        <a href="#about" class="text-sm hover:text-[var(--primary)]">عنّا</a>
+        <a href="#contact" class="text-sm hover:text-[var(--primary)]">تواصل</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/966500000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 rounded-md btn-primary text-white text-sm shadow"> 
+          <i class="fa-brands fa-whatsapp"></i>
+          تواصل عبر واتساب
+        </a>
+
+        <button id="menuBtn" class="md:hidden p-2 rounded border border-gray-200">
+          <i class="fa fa-bars text-[var(--dark)]"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="#products" class="py-2">المنتجات</a>
+        <a href="#features" class="py-2">خدماتنا</a>
+        <a href="#about" class="py-2">عنّا</a>
+        <a href="#contact" class="py-2">تواصل</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--dark)] leading-tight">أساس الوسام — أدوات صحية وسباكة بالرياض</h2>
+        <p class="mt-4 text-gray-600">أكبر تشكيلة من الخلاطات والمواسير والوصلات والخامات. جودة مضمونة وتسليم داخل مدينة الرياض.</p>
+
+        <div class="mt-6 flex gap-3">
+          <a href="https://wa.me/966500000000?text=مرحبًا%20أنا%20مهتم%20بمنتجات%20أساس%20الوسام" target="_blank" class="inline-flex items-center gap-3 px-4 py-3 rounded-md btn-primary text-white font-semibold shadow-lg">تواصل عبر واتساب <i class="fa fa-arrow-left"></i></a>
+          <a href="#products" class="inline-flex items-center gap-2 px-4 py-3 rounded-md border border-gray-200 text-[var(--dark)]">عرض المنتجات</a>
+        </div>
+
+        <ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-600">
+          <li class="flex items-center gap-2"><i class="fa fa-check-circle text-[var(--primary)]"></i> توصيل داخل الرياض</li>
+          <li class="flex items-center gap-2"><i class="fa fa-check-circle text-[var(--primary)]"></i> قطع أصلية ومستوردة</li>
+          <li class="flex items-center gap-2"><i class="fa fa-check-circle text-[var(--primary)]"></i> استشارات فنية مجانية</li>
+          <li class="flex items-center gap-2"><i class="fa fa-check-circle text-[var(--primary)]"></i> ضمان محدود على بعض المنتجات</li>
+        </ul>
+      </div>
+
+      <div class="flex-1" data-aos="zoom-in">
+        <div class="bg-gradient-to-tr from-[var(--primary)]/10 to-white p-4 rounded-2xl shadow-lg">
+          <img src="https://images.unsplash.com/photo-1581578738725-0a2e6b6c6a2f?auto=format&fit=crop&w=800&q=60" alt="منتجات سباكة" class="w-full rounded-lg object-cover max-h-80 mx-auto" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories" class="bg-gray-50 py-10">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-xl font-semibold text-[var(--dark)]" data-aos="fade-up">فئات المنتجات</h3>
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+        <!-- category item -->
+        <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="50">
+          <div class="flex flex-col items-center gap-2">
+            <div class="w-14 h-14 rounded-md bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)]">
+              <i class="fa fa-faucet fa-lg"></i>
+            </div>
+            <div class="text-sm font-semibold">خلاطات</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex flex-col items-center gap-2">
+            <div class="w-14 h-14 rounded-md bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)]">
+              <i class="fa fa-water fa-lg"></i>
+            </div>
+            <div class="text-sm font-semibold">مواسير</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="150">
+          <div class="flex flex-col items-center gap-2">
+            <div class="w-14 h-14 rounded-md bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)]">
+              <i class="fa fa-plug fa-lg"></i>
+            </div>
+            <div class="text-sm font-semibold">وصلات</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex flex-col items-center gap-2">
+            <div class="w-14 h-14 rounded-md bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)]">
+              <i class="fa fa-bath fa-lg"></i>
+            </div>
+            <div class="text-sm font-semibold">أحواض</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="250">
+          <div class="flex flex-col items-center gap-2">
+            <div class="w-14 h-14 rounded-md bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)]">
+              <i class="fa fa-wrench fa-lg"></i>
+            </div>
+            <div class="text-sm font-semibold">أدوات تركيب</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex flex-col items-center gap-2">
+            <div class="w-14 h-14 rounded-md bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)]">
+              <i class="fa fa-boxes fa-lg"></i>
+            </div>
+            <div class="text-sm font-semibold">خامات</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="py-14">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between">
+        <h3 class="text-2xl font-semibold text-[var(--dark)]" data-aos="fade-right">أحدث المنتجات</h3>
+        <div class="text-sm text-gray-500">عرض مختار من تشكيلتنا</div>
+      </div>
+
+      <!-- Grid desktop, Swiper on mobile -->
+      <div class="mt-6">
+        <div class="hidden md:grid grid-cols-3 gap-6" id="productsGrid">
+          <!-- Product Card (repeat) -->
+          <article class="bg-white rounded-xl shadow-sm overflow-hidden" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1581578738725-0a2e6b6c6a2f?auto=format&fit=crop&w=800&q=60" alt="خلاط مطبخ" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+              <h4 class="font-semibold text-[var(--dark)]">خلاط مطبخ موديل A23</h4>
+              <p class="text-sm text-gray-500 mt-1">ستانلس ستيل • صمام سيراميك • ضمان سنة</p>
+              <div class="mt-4 flex items-center justify-between">
+                <div class="text-sm text-gray-700 font-bold">ر.س 349</div>
+                <a href="https://wa.me/966500000000?text=مرحبًا%20أرغب%20بالاستفسار%20عن%20خلاط%20مطبخ%20موديل%20A23" target="_blank" class="px-3 py-2 rounded-md border border-[var(--primary)] text-[var(--primary)] text-sm">اطلب عبر واتساب</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="50">
+            <img src="https://images.unsplash.com/photo-1582719478176-ff0c4b3bb6a8?auto=format&fit=crop&w=800&q=60" alt="مواسير" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+              <h4 class="font-semibold text-[var(--dark)]">مواسير بي في سي 3/4"</h4>
+              <p class="text-sm text-gray-500 mt-1">خامة PVC عالية التحمل</p>
+              <div class="mt-4 flex items-center justify-between">
+                <div class="text-sm text-gray-700 font-bold">ر.س 25 للمتر</div>
+                <a href="https://wa.me/966500000000?text=مرحبًا%20أرغب%20بالاستفسار%20عن%20مواسير%20بي%20في%20سي%203/4" target="_blank" class="px-3 py-2 rounded-md border border-[var(--primary)] text-[var(--primary)] text-sm">اطلب عبر واتساب</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1560799629-4b7b1f1f4b2b?auto=format&fit=crop&w=800&q=60" alt="وصلات نحاس" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+              <h4 class="font-semibold text-[var(--dark)]">وصلات نحاس 1/2"</h4>
+              <p class="text-sm text-gray-500 mt-1">مقاومة للتآكل • جودة صناعية</p>
+              <div class="mt-4 flex items-center justify-between">
+                <div class="text-sm text-gray-700 font-bold">ر.س 45</div>
+                <a href="https://wa.me/966500000000?text=مرحبًا%20أرغب%20بالاستفسار%20عن%20وصلات%20نحاس%201/2" target="_blank" class="px-3 py-2 rounded-md border border-[var(--primary)] text-[var(--primary)] text-sm">اطلب عبر واتساب</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Swiper for mobile -->
+        <div class="md:hidden">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- slide 1 -->
+              <div class="swiper-slide p-2">
+                <article class="bg-white rounded-xl shadow-sm overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1581578738725-0a2e6b6c6a2f?auto=format&fit=crop&w=800&q=60" alt="خلاط" class="w-full h-44 object-cover" loading="lazy">
+                  <div class="p-3">
+                    <h4 class="font-semibold text-[var(--dark)]">خلاط مطبخ موديل A23</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <div class="text-sm text-gray-700 font-bold">ر.س 349</div>
+                      <a href="https://wa.me/966500000000?text=مرحبًا%20أرغب%20بالاستفسار%20عن%20خلاط%20مطبخ%20موديل%20A23" target="_blank" class="px-3 py-2 rounded-md border border-[var(--primary)] text-[var(--primary)] text-sm">واتساب</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- slide 2 -->
+              <div class="swiper-slide p-2">
+                <article class="bg-white rounded-xl shadow-sm overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1582719478176-ff0c4b3bb6a8?auto=format&fit=crop&w=800&q=60" alt="مواسير" class="w-full h-44 object-cover" loading="lazy">
+                  <div class="p-3">
+                    <h4 class="font-semibold text-[var(--dark)]">مواسير بي في سي 3/4"</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <div class="text-sm text-gray-700 font-bold">ر.س 25/م</div>
+                      <a href="https://wa.me/966500000000?text=مرحبًا%20أرغب%20بالاستفسار%20عن%20مواسير%20بي%20في%20سي%203/4" target="_blank" class="px-3 py-2 rounded-md border border-[var(--primary)] text-[var(--primary)] text-sm">واتساب</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- slide 3 -->
+              <div class="swiper-slide p-2">
+                <article class="bg-white rounded-xl shadow-sm overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1560799629-4b7b1f1f4b2b?auto=format&fit=crop&w=800&q=60" alt="وصلات" class="w-full h-44 object-cover" loading="lazy">
+                  <div class="p-3">
+                    <h4 class="font-semibold text-[var(--dark)]">وصلات نحاس 1/2"</h4>
+                    <div class="mt-2 flex items-center justify-between">
+                      <div class="text-sm text-gray-700 font-bold">ر.س 45</div>
+                      <a href="https://wa.me/966500000000?text=مرحبًا%20أرغب%20بالاستفسار%20عن%20وصلات%20نحاس%201/2" target="_blank" class="px-3 py-2 rounded-md border border-[var(--primary)] text-[var(--primary)] text-sm">واتساب</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination mt-4"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- View more -->
+      <div class="mt-6 text-center">
+        <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-gray-200">عرض المزيد / تواصل لطلب القائمة الكاملة</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="bg-gray-50 py-12">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-6">
+      <div class="bg-white p-6 rounded-xl shadow-sm" data-aos="fade-up">
+        <i class="fa fa-shield-check text-[var(--primary)] text-2xl"></i>
+        <h4 class="mt-3 font-semibold">قطع أصلية</h4>
+        <p class="mt-2 text-sm text-gray-500">نورد قطع أصيلة من موردين عالميين.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="50">
+        <i class="fa fa-truck text-[var(--primary)] text-2xl"></i>
+        <h4 class="mt-3 font-semibold">توصيل داخل الرياض</h4>
+        <p class="mt-2 text-sm text-gray-500">شحن سريع داخل المدينة خلال 24-48 ساعة.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa fa-tools text-[var(--primary)] text-2xl"></i>
+        <h4 class="mt-3 font-semibold">خدمة تركيب</h4>
+        <p class="mt-2 text-sm text-gray-500">نوفر خدمة تركيب حسب الطلب بتكلفة إضافية.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="150">
+        <i class="fa fa-headset text-[var(--primary)] text-2xl"></i>
+        <h4 class="mt-3 font-semibold">دعم فني</h4>
+        <p class="mt-2 text-sm text-gray-500">استشارات فنية مجانية قبل الشراء.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+      <h3 class="text-2xl font-semibold">عن أساس الوسام</h3>
+      <p class="mt-3 text-gray-600">أساس الوسام متجر متخصص في توريد أدوات السباكة والأدوات الصحية بمختلف الخامات والمقاسات. مقرنا في الرياض ونقدم خدمة توصيل داخل المدينة واستشارات فنية لعملائنا.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-[var(--primary)]/5 py-12">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6 items-center">
+      <div data-aos="fade-right">
+        <h3 class="text-2xl font-semibold text-[var(--dark)]">تواصل معنا</h3>
+        <p class="mt-2 text-gray-600">أسهل وسيلة للتواصل هي عبر واتساب أو الاتصال المباشر.</p>
+
+        <div class="mt-6 flex flex-col gap-3">
+          <a href="https://wa.me/966500000000" target="_blank" class="inline-flex items-center gap-3 px-4 py-3 rounded-md btn-primary text-white shadow-lg w-fit"> <i class="fa-brands fa-whatsapp"></i> واتساب: 050 000 0000</a>
+          <a href="tel:+966500000000" class="inline-flex items-center gap-3 px-4 py-3 rounded-md border border-gray-200 text-[var(--dark)] w-fit"> <i class="fa fa-phone"></i> اتصال مباشر</a>
+          <a href="https://maps.google.com?q=Riyadh" target="_blank" class="inline-flex items-center gap-3 px-4 py-3 rounded-md border border-gray-200 text-[var(--dark)] w-fit"> <i class="fa fa-map-marker-alt"></i> موقعنا في الرياض</a>
+        </div>
+      </div>
+
+      <form id="contactForm" class="bg-white p-6 rounded-xl shadow-sm" data-aos="fade-left">
+        <label class="block text-sm">الاسم</label>
+        <input required name="name" class="mt-2 w-full rounded-md border border-gray-200 px-3 py-2" placeholder="اسمك">
+
+        <label class="block text-sm mt-3">رقم الجوال</label>
+        <input required name="phone" class="mt-2 w-full rounded-md border border-gray-200 px-3 py-2" placeholder="05x xxx xxxx">
+
+        <label class="block text-sm mt-3">الرسالة</label>
+        <textarea required name="message" rows="4" class="mt-2 w-full rounded-md border border-gray-200 px-3 py-2" placeholder="كيف نساعدك؟"></textarea>
+
+        <div class="mt-4 text-left">
+          <button type="submit" class="px-4 py-2 rounded-md btn-primary text-white">إرسال</button>
+        </div>
+        <p id="formMsg" class="mt-3 text-sm text-green-600 hidden">تم إرسال رسالتك. سنرد عليك قريباً.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-gray-100 py-6">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-gray-600">© 2025 أساس الوسام — كل الحقوق محفوظة</div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-gray-500 hover:text-[var(--primary)]"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-gray-500 hover:text-[var(--primary)]"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="text-gray-500 hover:text-[var(--primary)]"><i class="fa fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "أساس الوسام",
+    "url": "https://your-domain.example",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "الرياض",
+      "addressCountry": "SA"
+    }
+  }
+  </script>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      AOS.init({ duration: 700, once: true });
+
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+
+      // Swiper init
+      if(typeof Swiper !== 'undefined'){
+        new Swiper('.mySwiper', {
+          slidesPerView: 1.06,
+          spaceBetween: 12,
+          pagination: { el: '.swiper-pagination', clickable: true }
+        });
+      }
+
+      // Simple contact form handler (no backend) - opens whatsapp with message
+      const form = document.getElementById('contactForm');
+      const formMsg = document.getElementById('formMsg');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = form.name.value.trim();
+        const phone = form.phone.value.trim();
+        const message = form.message.value.trim();
+        const text = `مرحبا%20أنا:%20${encodeURIComponent(name)}%0Aرقم:%20${encodeURIComponent(phone)}%0Aالرسالة:%20${encodeURIComponent(message)}`;
+        // open whatsapp (user to send)
+        window.open('https://wa.me/966500000000?text='+text, '_blank');
+        formMsg.classList.remove('hidden');
+        // reset
+        form.reset();
+        setTimeout(()=> formMsg.classList.add('hidden'), 5000);
+      });
+
+    });
+  </script>
+</body>
+</html>
