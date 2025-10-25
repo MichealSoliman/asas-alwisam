@@ -226,6 +226,316 @@
             animation: float 4s ease-in-out infinite;
         }
     </style>
+      <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#116677',
+                        secondary: '#333333',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    },
+                    animation: {
+                        'zoom-in': 'zoomIn 0.3s ease-out',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'slide-in': 'slideIn 0.4s ease-out',
+                    },
+                    keyframes: {
+                        zoomIn: {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .product-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(17, 102, 119, 0.25);
+            border-color: #116677;
+        }
+        
+        .product-image {
+            transition: all 0.5s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lightbox.active {
+            display: flex;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            animation: zoomIn 0.3s ease-out;
+        }
+        
+        .lightbox-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .product-badge {
+            background: linear-gradient(135deg, #f59e0b 0%, #e6900b 100%);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+     <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#116677',
+                        secondary: '#333333',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { 
+                                'box-shadow': '0 0 20px rgba(17, 102, 119, 0.3)',
+                                'transform': 'scale(1)'
+                            },
+                            '50%': { 
+                                'box-shadow': '0 0 40px rgba(17, 102, 119, 0.6)',
+                                'transform': 'scale(1.05)'
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .about-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .about-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(17, 102, 119, 0.25);
+            border-color: #116677;
+        }
+        
+        .icon-wrapper {
+            background: linear-gradient(135deg, #116677 0%, #0a4d5a 100%);
+            box-shadow: 0 10px 25px -5px rgba(17, 102, 119, 0.4);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 24px;
+            width: 40px;
+            height: 2px;
+            background: #116677;
+        }
+        
+        .timeline-item:last-child::before {
+            display: none;
+        }
+        
+        .floating-badge {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #116677 0%, #0a4d5a 100%);
+        }
+    </style>
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#116677',
+                        secondary: '#333333',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .footer-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(17, 102, 119, 0.1) 0%, rgba(17, 102, 119, 0.05) 100%);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+        
+        .footer-bg::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+        
+        .social-icon {
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-icon:hover {
+            background: #f59e0b;
+            transform: translateY(-3px);
+            border-color: #f59e0b;
+        }
+        
+        .footer-link {
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .footer-link:hover {
+            color: #f59e0b;
+            padding-right: 10px;
+        }
+        
+        .footer-link:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-item {
+            transition: all 0.3s ease;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .contact-item:hover {
+            color: #f59e0b;
+            transform: translateX(-5px);
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .newsletter-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .section-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
 <body class="font-cairo bg-gray-50">
 <!-- Header -->
@@ -435,6 +745,247 @@
             </div>
         </div>
     </section>
+
+        <!-- Enhanced About Section -->
+    <section id="about" class="py-24 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-72 h-72 bg-primary opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent opacity-5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20" data-aos="fade-up">
+                <div class="inline-flex items-center bg-primary bg-opacity-10 text-primary px-6 py-3 rounded-full font-semibold text-lg mb-6">
+                    <i class="fas fa-building ml-2"></i>
+                    عن شركتنا
+                </div>
+                <h2 class="text-5xl font-bold text-primary mb-6">أساس الوسام للأدوات الصحية</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <span class="text-primary font-semibold">رواد في مجال الأدوات الصحية والسباكة</span> منذ أكثر من عقد من الزمان، 
+                    نقدم حلولاً متكاملة وخدمات استشارية تلبي أعلى معايير الجودة
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-start gap-12 mb-20">
+                <!-- Content Section -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                        <h3 class="text-3xl font-bold text-primary mb-6">قصة تأسيسنا</h3>
+                        
+                        <div class="space-y-6 mb-8">
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                تأسس متجر <span class="text-primary font-semibold">"أساس الوسام"</span> للأدوات الصحية والسباكة في الرياض عام 2010، 
+                                ويمتلك خبرة واسعة في توفير أفضل المنتجات والخدمات لعملائنا الكرام.
+                            </p>
+                            
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                بدأنا رحلتنا بمتجر صغير في قلب الرياض، ومع ثقة عملائنا وتفانينا في تقديم الأفضل، 
+                                تطورنا لنصبح أحد أبرز موردي الأدوات الصحية في المملكة.
+                            </p>
+                            
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                نحرص على تقديم منتجات أصلية بجودة عالية وبأسعار منافسة، مع فريق فني متخصص لتقديم 
+                                الاستشارات والدعم الفني اللازم. نفتخر بكوننا الشريك الموثوق للعديد من المقاولين وأصحاب المنازل في الرياض.
+                            </p>
+                        </div>
+
+                        <!-- Mission & Vision -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="gradient-bg text-white p-6 rounded-2xl">
+                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="fas fa-eye text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-xl mb-3">رؤيتنا</h4>
+                                <p class="text-white text-opacity-90">أن نكون الوجهة الأولى في الرياض لكل ما يخص الأدوات الصحية ومواد السباكة، من خلال تقديم منتجات عالية الجودة وخدمة متميزة.</p>
+                            </div>
+                            
+                            <div class="bg-accent text-white p-6 rounded-2xl">
+                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="fas fa-bullseye text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-xl mb-3">رسالتنا</h4>
+                                <p class="text-white text-opacity-90">توفير حلول سباكة متكاملة تلبي احتياجات العملاء بجودة استثنائية وأسعار تنافسية، مع خدمة ما بعد البيع التي تتجاوز التوقعات.</p>
+                            </div>
+                        </div>
+
+                        <!-- Core Values -->
+                        <div class="bg-gray-50 p-6 rounded-2xl">
+                            <h4 class="font-bold text-xl text-primary mb-4">قيمنا الأساسية</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white ml-3 flex-shrink-0">
+                                        <i class="fas fa-check text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700">الجودة والتميز</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white ml-3 flex-shrink-0">
+                                        <i class="fas fa-check text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700">الشفافية والنزاهة</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white ml-3 flex-shrink-0">
+                                        <i class="fas fa-check text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700">الابتكار والتطوير</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white ml-3 flex-shrink-0">
+                                        <i class="fas fa-check text-sm"></i>
+                                    </div>
+                                    <span class="text-gray-700">رضا العملاء أولاً</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Images & Timeline Section -->
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <!-- Main Image -->
+                    <div class="rounded-3xl overflow-hidden shadow-2xl mb-8 relative">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1752&q=80" 
+                             alt="متجر أساس الوسام" 
+                             class="w-full h-80 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+                            <h4 class="text-xl font-bold mb-2">فرعنا الرئيسي في الرياض</h4>
+                            <p class="text-white text-opacity-90">شارع الملك فهد - الرياض</p>
+                        </div>
+                        <div class="absolute top-4 left-4 floating-badge bg-accent text-white py-2 px-4 rounded-full font-bold text-sm">
+                            <i class="fas fa-store ml-1"></i>متجرنا الرئيسي
+                        </div>
+                    </div>
+
+                    <!-- Timeline -->
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                        <h4 class="text-2xl font-bold text-primary mb-6">رحلة النجاح</h4>
+                        <div class="space-y-8 relative">
+                            <!-- Timeline Item 1 -->
+                            <div class="timeline-item relative pr-12">
+                                <div class="absolute right-0 top-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-flag text-sm"></i>
+                                </div>
+                                <div class="bg-primary bg-opacity-5 p-4 rounded-2xl">
+                                    <h5 class="font-bold text-primary text-lg mb-2">2010</h5>
+                                    <p class="text-gray-700">تأسيس الشركة وافتتاح أول متجر في الرياض</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Timeline Item 2 -->
+                            <div class="timeline-item relative pr-12">
+                                <div class="absolute right-0 top-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-expand text-sm"></i>
+                                </div>
+                                <div class="bg-primary bg-opacity-5 p-4 rounded-2xl">
+                                    <h5 class="font-bold text-primary text-lg mb-2">2014</h5>
+                                    <p class="text-gray-700">توسعة المتجر وزيادة نطاق المنتجات والخدمات</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Timeline Item 3 -->
+                            <div class="timeline-item relative pr-12">
+                                <div class="absolute right-0 top-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-award text-sm"></i>
+                                </div>
+                                <div class="bg-primary bg-opacity-5 p-4 rounded-2xl">
+                                    <h5 class="font-bold text-primary text-lg mb-2">2018</h5>
+                                    <p class="text-gray-700">الحصول على شهادة الجودة وتوسعة قاعدة العملاء</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Timeline Item 4 -->
+                            <div class="relative pr-12">
+                                <div class="absolute right-0 top-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-rocket text-sm"></i>
+                                </div>
+                                <div class="bg-accent bg-opacity-10 p-4 rounded-2xl">
+                                    <h5 class="font-bold text-accent text-lg mb-2">2023</h5>
+                                    <p class="text-gray-700">تطوير خدماتنا الرقمية وزيادة فريق العمل المتخصص</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Stats -->
+            <div class="bg-gradient-to-l from-primary to-secondary rounded-3xl p-12 text-white text-center" data-aos="fade-up">
+                <h3 class="text-3xl font-bold mb-8">أرقامنا تتحدث عنا</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 animate-pulse-glow">+13</div>
+                        <div class="text-xl opacity-90">سنة خبرة</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 animate-pulse-glow">+5000</div>
+                        <div class="text-xl opacity-90">عميل راضي</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 animate-pulse-glow">+300</div>
+                        <div class="text-xl opacity-90">مشروع منفذ</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 animate-pulse-glow">+50</div>
+                        <div class="text-xl opacity-90">علامة تجارية</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team & Partners -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+                <!-- Team Section -->
+                <div class="about-card rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center text-white ml-4">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-primary">فريقنا المتخصص</h4>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        نفتخر بفريق عمل متكامل من المهندسين والفنيين المتخصصين في مجال السباكة والأدوات الصحية، 
+                        مدربين على أعلى المستويات لضمان تقديم أفضل الخدمات الاستشارية والفنية.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-graduation-cap ml-2 text-primary"></i>
+                        <span>شهادات معتمدة في الهندسة الصحية والسباكة</span>
+                    </div>
+                </div>
+
+                <!-- Partners Section -->
+                <div class="about-card rounded-3xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center text-white ml-4">
+                            <i class="fas fa-handshake text-2xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-primary">شركاؤنا</h4>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        نتعاون مع أبرز العلامات التجارية العالمية في مجال الأدوات الصحية والسباكة، 
+                        لضمان توفير منتجات أصلية بجودة عالمية تناسب جميع الاحتياجات والميزانيات.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-globe ml-2 text-primary"></i>
+                        <span>شراكات مع علامات تجارية عالمية من أوروبا وآسيا</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        });
+    </script>
 
      <!-- Enhanced Categories Section -->
     <section id="categories" class="py-24 relative overflow-hidden">
@@ -749,108 +1300,528 @@
         });
     </script>
 
-    <!-- Products Section -->
-    <section id="products" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-4 text-primary" data-aos="fade-up">أحدث المنتجات</h2>
-            <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up">اكتشف مجموعتنا المميزة من أدوات السباكة والأدوات الصحية بأفضل الأسعار</p>
+   
+    <!-- Enhanced Products Gallery Section -->
+    <section id="products" class="py-24 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-10 left-10 w-64 h-64 bg-primary opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-accent opacity-5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20" data-aos="fade-up">
+                <div class="inline-flex items-center bg-primary bg-opacity-10 text-primary px-6 py-3 rounded-full font-semibold text-lg mb-6">
+                    <i class="fas fa-cube ml-2"></i>
+                    معرض منتجاتنا
+                </div>
+                <h2 class="text-5xl font-bold text-primary mb-6">أحدث المنتجات</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    اكتشف مجموعتنا المميزة من <span class="text-primary font-semibold">أدوات السباكة والأدوات الصحية</span> 
+                    بجودة عالمية وأسعار تنافسية. انقر على أي صورة لعرضها بحجم أكبر
+                </p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Products Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+                <button class="filter-btn bg-primary text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 active" data-filter="all">
+                    جميع المنتجات
+                </button>
+                <button class="filter-btn bg-white text-primary border border-primary px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-primary hover:text-white" data-filter="faucets">
+                    خلاطات المياه
+                </button>
+                <button class="filter-btn bg-white text-primary border border-primary px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-primary hover:text-white" data-filter="pipes">
+                    مواسير ووصلات
+                </button>
+                <button class="filter-btn bg-white text-primary border border-primary px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-primary hover:text-white" data-filter="sinks">
+                    أحواض ومغاسل
+                </button>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="products-grid">
+                
                 <!-- Product 1 -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden transition duration-500" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25856cd63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="خلاط مياه حديث" class="w-full h-60 object-cover transition duration-500 hover:scale-110">
-                        <div class="absolute top-4 left-4 bg-accent text-white py-1 px-3 rounded-full font-bold">جديد</div>
+                <div class="product-card group rounded-3xl overflow-hidden" data-aos="fade-up" data-aos-delay="100" data-category="faucets">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25856cd63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                             alt="خلاط مياه حديث" 
+                             class="product-image w-full h-full object-cover"
+                             data-product-id="1">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                            <button class="view-details bg-white text-primary px-6 py-3 rounded-xl font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <i class="fas fa-expand ml-2"></i>
+                                عرض التفاصيل
+                            </button>
+                        </div>
+                        <div class="absolute top-4 left-4 product-badge text-white py-2 px-4 rounded-full font-bold text-sm floating">
+                            <i class="fas fa-bolt ml-1"></i>جديد
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl text-primary mb-2">خلاط مياه حديث</h3>
-                        <p class="text-gray-600 mb-4">تصميم عصري مع تقنية توفير المياه</p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-gray-500 text-sm">الخامة: نحاس مطلي بالكروم</span>
-                            <span class="text-gray-500 text-sm">المقاس: 1/2 بوصة</span>
+                        <h3 class="font-bold text-xl text-primary mb-3">خلاط مياه حديث</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">تصميم عصري مع تقنية توفير المياه المتطورة</p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-ruler ml-1"></i> 1/2 بوصة
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-weight ml-1"></i> نحاس كروم
+                            </div>
                         </div>
-                        <div class="flex justify-between items-center">
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
                             <span class="text-primary font-bold text-xl">199 ر.س</span>
-                            <a href="https://wa.me/966500000000?text=مرحباً، أريد طلب خلاط مياه حديث" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg inline-flex items-center transition duration-300">
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="https://wa.me/966500000000?text=مرحباً، أريد طلب خلاط مياه حديث" 
+                               target="_blank" 
+                               class="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-xl text-center transition-all duration-300 transform hover:scale-105">
                                 <i class="fab fa-whatsapp ml-1"></i> طلب
                             </a>
+                            <button class="view-product bg-primary hover:bg-secondary text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+                                    data-product-id="1">
+                                <i class="fas fa-eye"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Product 2 -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden transition duration-500" data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="مواسير PVC" class="w-full h-60 object-cover transition duration-500 hover:scale-110">
+                <div class="product-card group rounded-3xl overflow-hidden" data-aos="fade-up" data-aos-delay="200" data-category="pipes">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             alt="مواسير PVC" 
+                             class="product-image w-full h-full object-cover"
+                             data-product-id="2">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                            <button class="view-details bg-white text-primary px-6 py-3 rounded-xl font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <i class="fas fa-expand ml-2"></i>
+                                عرض التفاصيل
+                            </button>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl text-primary mb-2">مواسير PVC</h3>
-                        <p class="text-gray-600 mb-4">مقاومة للصدأ والتآكل وعمر طويل</p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-gray-500 text-sm">الخامة: PVC</span>
-                            <span class="text-gray-500 text-sm">المقاس: 2 بوصة</span>
+                        <h3 class="font-bold text-xl text-primary mb-3">مواسير PVC</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">مقاومة للصدأ والتآكل مع عمر افتراضي طويل</p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-ruler ml-1"></i> 2 بوصة
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-weight ml-1"></i> PVC
+                            </div>
                         </div>
-                        <div class="flex justify-between items-center">
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                             <span class="text-primary font-bold text-xl">45 ر.س</span>
-                            <a href="https://wa.me/966500000000?text=مرحباً، أريد طلب مواسير PVC" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg inline-flex items-center transition duration-300">
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="https://wa.me/966500000000?text=مرحباً، أريد طلب مواسير PVC" 
+                               target="_blank" 
+                               class="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-xl text-center transition-all duration-300 transform hover:scale-105">
                                 <i class="fab fa-whatsapp ml-1"></i> طلب
                             </a>
+                            <button class="view-product bg-primary hover:bg-secondary text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+                                    data-product-id="2">
+                                <i class="fas fa-eye"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Product 3 -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden transition duration-500" data-aos="fade-up" data-aos-delay="300">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" alt="حوض ستانلس ستيل" class="w-full h-60 object-cover transition duration-500 hover:scale-110">
-                        <div class="absolute top-4 left-4 bg-accent text-white py-1 px-3 rounded-full font-bold">الأكثر مبيعاً</div>
+                <div class="product-card group rounded-3xl overflow-hidden" data-aos="fade-up" data-aos-delay="300" data-category="sinks">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" 
+                             alt="حوض ستانلس ستيل" 
+                             class="product-image w-full h-full object-cover"
+                             data-product-id="3">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                            <button class="view-details bg-white text-primary px-6 py-3 rounded-xl font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <i class="fas fa-expand ml-2"></i>
+                                عرض التفاصيل
+                            </button>
+                        </div>
+                        <div class="absolute top-4 left-4 product-badge text-white py-2 px-4 rounded-full font-bold text-sm floating">
+                            <i class="fas fa-fire ml-1"></i>الأكثر مبيعاً
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl text-primary mb-2">حوض ستانلس ستيل</h3>
-                        <p class="text-gray-600 mb-4">مقاوم للخدوش وسهل التنظيف</p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-gray-500 text-sm">الخامة: ستانلس ستيل</span>
-                            <span class="text-gray-500 text-sm">المقاس: 60×45 سم</span>
+                        <h3 class="font-bold text-xl text-primary mb-3">حوض ستانلس ستيل</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">مقاوم للخدوش وسهل التنظيف بتصميم عصري</p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-ruler ml-1"></i> 60×45 سم
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-weight ml-1"></i> ستانلس ستيل
+                            </div>
                         </div>
-                        <div class="flex justify-between items-center">
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
                             <span class="text-primary font-bold text-xl">320 ر.س</span>
-                            <a href="https://wa.me/966500000000?text=مرحباً، أريد طلب حوض ستانلس ستيل" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg inline-flex items-center transition duration-300">
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="https://wa.me/966500000000?text=مرحباً، أريد طلب حوض ستانلس ستيل" 
+                               target="_blank" 
+                               class="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-xl text-center transition-all duration-300 transform hover:scale-105">
                                 <i class="fab fa-whatsapp ml-1"></i> طلب
                             </a>
+                            <button class="view-product bg-primary hover:bg-secondary text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+                                    data-product-id="3">
+                                <i class="fas fa-eye"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Product 4 -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden transition duration-500" data-aos="fade-up" data-aos-delay="400">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="قاعدة تواليت حديثة" class="w-full h-60 object-cover transition duration-500 hover:scale-110">
+                <div class="product-card group rounded-3xl overflow-hidden" data-aos="fade-up" data-aos-delay="400" data-category="sinks">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             alt="قاعدة تواليت حديثة" 
+                             class="product-image w-full h-full object-cover"
+                             data-product-id="4">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                            <button class="view-details bg-white text-primary px-6 py-3 rounded-xl font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <i class="fas fa-expand ml-2"></i>
+                                عرض التفاصيل
+                            </button>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl text-primary mb-2">قاعدة تواليت حديثة</h3>
-                        <p class="text-gray-600 mb-4">تصميم مدمج مع تقنية التوفير المائي</p>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-gray-500 text-sm">الخامة: سيراميك</span>
-                            <span class="text-gray-500 text-sm">المقاس: قياسي</span>
+                        <h3 class="font-bold text-xl text-primary mb-3">قاعدة تواليت حديثة</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">تصميم مدمج مع تقنية التوفير المائي المتطورة</p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-ruler ml-1"></i> قياسي
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-weight ml-1"></i> سيراميك
+                            </div>
                         </div>
-                        <div class="flex justify-between items-center">
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                             <span class="text-primary font-bold text-xl">450 ر.س</span>
-                            <a href="https://wa.me/966500000000?text=مرحباً، أريد طلب قاعدة تواليت حديثة" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg inline-flex items-center transition duration-300">
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="https://wa.me/966500000000?text=مرحباً، أريد طلب قاعدة تواليت حديثة" 
+                               target="_blank" 
+                               class="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-xl text-center transition-all duration-300 transform hover:scale-105">
                                 <i class="fab fa-whatsapp ml-1"></i> طلب
                             </a>
+                            <button class="view-product bg-primary hover:bg-secondary text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105"
+                                    data-product-id="4">
+                                <i class="fas fa-eye"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
             
+            <!-- CTA Section -->
             <div class="text-center mt-16" data-aos="fade-up">
-                <a href="#contact" class="bg-primary hover:bg-secondary text-white font-bold py-4 px-12 rounded-lg inline-flex items-center transition duration-300 text-lg">
-                    <i class="fas fa-phone ml-2"></i>
-                    تواصل لرؤية المزيد من المنتجات
-                </a>
+                <div class="bg-gradient-to-l from-primary to-secondary rounded-3xl p-12 text-white relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-32 h-32 bg-white opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                    <div class="absolute bottom-0 right-0 w-40 h-40 bg-accent opacity-10 rounded-full translate-x-1/2 translate-y-1/2"></div>
+                    
+                    <h3 class="text-3xl font-bold mb-4 relative z-10">تريد رؤية المزيد من المنتجات؟</h3>
+                    <p class="text-xl mb-8 opacity-90 relative z-10">لدينا المزيد من التصميمات والمنتجات المميزة. تواصل معنا لعرض الكتالوج الكامل</p>
+                    <a href="#contact" class="bg-accent hover:bg-amber-600 text-white font-bold py-4 px-12 rounded-xl inline-flex items-center transition-all duration-300 transform hover:scale-105 text-lg relative z-10">
+                        <i class="fas fa-images ml-2 text-xl"></i>
+                        عرض الكتالوج الكامل
+                    </a>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="absolute top-4 left-4 z-20">
+            <button class="close-lightbox text-white text-3xl p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition duration-300">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="absolute top-4 right-4 z-20">
+            <button class="download-image text-white text-xl p-3 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition duration-300">
+                <i class="fas fa-download"></i>
+            </button>
+        </div>
+        
+        <div class="container mx-auto px-4 flex items-center justify-center h-full">
+            <div class="lightbox-content bg-white rounded-3xl overflow-hidden max-w-4xl w-full animate-slide-in">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <!-- Image Section -->
+                    <div class="relative bg-gray-100">
+                        <img id="lightbox-image" src="" alt="" class="w-full h-80 lg:h-full object-cover">
+                        <button class="lightbox-nav prev absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-2xl p-3 rounded-full lightbox-nav">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button class="lightbox-nav next absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-2xl p-3 rounded-full lightbox-nav">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Details Section -->
+                    <div class="p-8">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 id="lightbox-title" class="font-bold text-2xl text-primary mb-2"></h3>
+                                <div class="flex items-center text-amber-500 mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="text-gray-500 text-sm mr-2">(4.7)</span>
+                                </div>
+                            </div>
+                            <span id="lightbox-price" class="text-primary font-bold text-2xl"></span>
+                        </div>
+                        
+                        <p id="lightbox-description" class="text-gray-600 mb-6 leading-relaxed"></p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-50 p-4 rounded-xl">
+                                <div class="text-sm text-gray-500 mb-1">الخامة</div>
+                                <div id="lightbox-material" class="font-semibold text-primary"></div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl">
+                                <div class="text-sm text-gray-500 mb-1">المقاس</div>
+                                <div id="lightbox-size" class="font-semibold text-primary"></div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl">
+                                <div class="text-sm text-gray-500 mb-1">الضمان</div>
+                                <div class="font-semibold text-primary">5 سنوات</div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl">
+                                <div class="text-sm text-gray-500 mb-1">التوفر</div>
+                                <div class="font-semibold text-green-500">متوفر</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="#" id="lightbox-whatsapp" target="_blank" 
+                               class="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-whatsapp ml-2 text-xl"></i>
+                                طلب عبر واتساب
+                            </a>
+                            <button class="close-lightbox bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                                إغلاق
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+            
+            // Product data
+            const products = {
+                1: {
+                    title: "خلاط مياه حديث",
+                    description: "خلاط مياه بتصميم عصري من النحاس المطلي بالكروم، مقاوم للصدأ والتآكل، مع تقنية توفير المياه المتطورة وتصميم يناسب جميع الأذواق. مثالي للمطابخ والحمامات الحديثة.",
+                    price: "199 ر.س",
+                    material: "نحاس مطلي بالكروم",
+                    size: "1/2 بوصة",
+                    image: "https://images.unsplash.com/photo-1558618666-fcd25856cd63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+                    whatsapp: "https://wa.me/966500000000?text=مرحباً، أريد طلب خلاط مياه حديث"
+                },
+                2: {
+                    title: "مواسير PVC",
+                    description: "مواسير PVC عالية الجودة مقاومة للصدأ والتآكل مع عمر افتراضي طويل. مثالية للمشاريع السكنية والتجارية، تتميز بمقاومة عالية للضغط والعوامل الجوية.",
+                    price: "45 ر.س",
+                    material: "PVC",
+                    size: "2 بوصة",
+                    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+                    whatsapp: "https://wa.me/966500000000?text=مرحباً، أريد طلب مواسير PVC"
+                },
+                3: {
+                    title: "حوض ستانلس ستيل",
+                    description: "حوض ستانلس ستيل عالي الجودة مقاوم للخدوش والبقع، سهل التنظيف والصيانة. بتصميم عصري يناسب جميع مساحات المطابخ، مع ضمان ضد الصدأ والتآكل.",
+                    price: "320 ر.س",
+                    material: "ستانلس ستيل",
+                    size: "60×45 سم",
+                    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80",
+                    whatsapp: "https://wa.me/966500000000?text=مرحباً، أريد طلب حوض ستانلس ستيل"
+                },
+                4: {
+                    title: "قاعدة تواليت حديثة",
+                    description: "قاعدة تواليت حديثة بتصميم مدمج وأنيق، مزودة بتقنية التوفير المائي المزدوج. مصنوعة من السيراميك عالي الجودة، سهلة التركيب والتنظيف.",
+                    price: "450 ر.س",
+                    material: "سيراميك",
+                    size: "قياسي",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+                    whatsapp: "https://wa.me/966500000000?text=مرحباً، أريد طلب قاعدة تواليت حديثة"
+                }
+            };
+            
+            let currentProductId = 1;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxPrice = document.getElementById('lightbox-price');
+            const lightboxDescription = document.getElementById('lightbox-description');
+            const lightboxMaterial = document.getElementById('lightbox-material');
+            const lightboxSize = document.getElementById('lightbox-size');
+            const lightboxWhatsapp = document.getElementById('lightbox-whatsapp');
+            
+            // Open lightbox
+            document.querySelectorAll('.view-product, .view-details, .product-image').forEach(element => {
+                element.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product-id') || 
+                                     this.closest('.product-card').querySelector('.view-product').getAttribute('data-product-id');
+                    openLightbox(parseInt(productId));
+                });
+            });
+            
+            // Close lightbox
+            document.querySelectorAll('.close-lightbox').forEach(button => {
+                button.addEventListener('click', closeLightbox);
+            });
+            
+            // Lightbox navigation
+            document.querySelector('.lightbox .prev').addEventListener('click', function() {
+                navigateLightbox(-1);
+            });
+            
+            document.querySelector('.lightbox .next').addEventListener('click', function() {
+                navigateLightbox(1);
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (lightbox.classList.contains('active')) {
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowRight') navigateLightbox(1);
+                    if (e.key === 'ArrowLeft') navigateLightbox(-1);
+                }
+            });
+            
+            // Close lightbox when clicking on backdrop
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+            
+            // Filter products
+            document.querySelectorAll('.filter-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    document.querySelectorAll('.filter-btn').forEach(btn => {
+                        btn.classList.remove('active', 'bg-primary', 'text-white');
+                        btn.classList.add('bg-white', 'text-primary', 'border', 'border-primary');
+                    });
+                    
+                    this.classList.add('active', 'bg-primary', 'text-white');
+                    this.classList.remove('bg-white', 'text-primary', 'border', 'border-primary');
+                    
+                    // Filter products
+                    document.querySelectorAll('.product-card').forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeIn 0.5s ease-out';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            function openLightbox(productId) {
+                currentProductId = productId;
+                const product = products[productId];
+                
+                lightboxImage.src = product.image;
+                lightboxTitle.textContent = product.title;
+                lightboxPrice.textContent = product.price;
+                lightboxDescription.textContent = product.description;
+                lightboxMaterial.textContent = product.material;
+                lightboxSize.textContent = product.size;
+                lightboxWhatsapp.href = product.whatsapp;
+                
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+            
+            function navigateLightbox(direction) {
+                const productIds = Object.keys(products);
+                const currentIndex = productIds.indexOf(currentProductId.toString());
+                let newIndex = currentIndex + direction;
+                
+                if (newIndex < 0) newIndex = productIds.length - 1;
+                if (newIndex >= productIds.length) newIndex = 0;
+                
+                openLightbox(parseInt(productIds[newIndex]));
+            }
+            
+            // Download image
+            document.querySelector('.download-image').addEventListener('click', function() {
+                const link = document.createElement('a');
+                link.href = lightboxImage.src;
+                link.download = lightboxTitle.textContent + '.jpg';
+                link.click();
+            });
+        });
+    </script>
 
     <!-- Features Section -->
     <section id="services" class="py-20 bg-gray-50">
@@ -965,206 +1936,242 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center">
-                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right">
-                    <h2 class="text-4xl font-bold mb-6 text-primary">عن أساس الوسام</h2>
-                    <p class="text-gray-700 mb-6 text-lg leading-relaxed">
-                        تأسس متجر "أساس الوسام" للأدوات الصحية والسباكة في الرياض عام 2010، ويمتلك خبرة واسعة في توفير أفضل المنتجات والخدمات لعملائنا الكرام.
-                    </p>
-                    <p class="text-gray-700 mb-6 text-lg leading-relaxed">
-                        نحرص على تقديم منتجات أصلية بجودة عالية وبأسعار منافسة، مع فريق فني متخصص لتقديم الاستشارات والدعم الفني اللازم. نفتخر بكوننا الشريك الموثوق للعديد من المقاولين وأصحاب المنازل في الرياض.
-                    </p>
-                    <p class="text-gray-700 mb-8 text-lg leading-relaxed">
-                        نسعى دائمًا لتطوير خدماتنا وتوسعة نطاق منتجاتنا لتلبية احتياجات السوق المتغيرة، مع الحفاظ على معايير الجودة والخدمة التي جعلتنا الخيار الأول للكثيرين.
-                    </p>
-                    <div class="bg-primary text-white p-6 rounded-2xl">
-                        <h3 class="font-bold text-xl mb-3">رؤيتنا</h3>
-                        <p class="text-lg">أن نكون الوجهة الأولى في الرياض لكل ما يخص الأدوات الصحية ومواد السباكة، من خلال تقديم منتجات عالية الجودة وخدمة متميزة.</p>
-                    </div>
-                </div>
-                <div class="lg:w-1/2" data-aos="fade-left">
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="rounded-2xl overflow-hidden shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1752&q=80" alt="متجر أساس الوسام" class="w-full h-80 object-cover">
-                        </div>
-                        <div class="rounded-2xl overflow-hidden shadow-lg mt-12">
-                            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" alt="منتجات أساس الوسام" class="w-full h-80 object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-bg text-white py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">تواصل معنا</h2>
-            <p class="text-xl text-center mb-16 max-w-3xl mx-auto" data-aos="fade-up">نحن هنا لمساعدتك في اختيار المنتجات المناسبة وتقديم الاستشارات الفنية</p>
-            
-            <div class="flex flex-col lg:flex-row">
-                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right">
-                    <h3 class="text-2xl font-bold mb-8">معلومات الاتصال</h3>
-                    
-                    <div class="space-y-8 mb-12">
-                        <!-- WhatsApp -->
-                        <a href="https://wa.me/966500000000" target="_blank" class="flex items-center bg-white bg-opacity-10 hover:bg-opacity-20 p-5 rounded-2xl transition duration-300">
-                            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white ml-5">
-                                <i class="fab fa-whatsapp text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-xl">واتساب</h4>
-                                <p class="text-gray-200 text-lg">+966 50 000 0000</p>
-                            </div>
-                        </a>
-                        
-                        <!-- Phone -->
-                        <a href="tel:+966500000000" class="flex items-center bg-white bg-opacity-10 hover:bg-opacity-20 p-5 rounded-2xl transition duration-300">
-                            <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white ml-5">
-                                <i class="fas fa-phone text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-xl">اتصال هاتفي</h4>
-                                <p class="text-gray-200 text-lg">+966 50 000 0000</p>
-                            </div>
-                        </a>
-                        
-                        <!-- Location -->
-                        <a href="https://goo.gl/maps/example" target="_blank" class="flex items-center bg-white bg-opacity-10 hover:bg-opacity-20 p-5 rounded-2xl transition duration-300">
-                            <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-white ml-5">
-                                <i class="fas fa-map-marker-alt text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-xl">خريطة جوجل</h4>
-                                <p class="text-gray-200 text-lg">الرياض، السعودية - شارع الملك فهد</p>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="bg-white bg-opacity-10 p-6 rounded-2xl">
-                        <h4 class="font-bold text-xl mb-4">ساعات العمل</h4>
-                        <div class="space-y-2 text-lg">
-                            <div class="flex justify-between">
-                                <span>السبت - الخميس:</span>
-                                <span>8:00 ص - 10:00 م</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>الجمعة:</span>
-                                <span>4:00 م - 10:00 م</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+  
+
+       <!-- Enhanced Footer Without Cards -->
+    <footer class="footer-bg text-white pt-16 pb-8 relative z-10">
+        <div class="container mx-auto px-4 relative z-20">
+            <!-- Main Footer Content - Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-6 gap-8 mb-12">
                 
-                <div class="lg:w-1/2" data-aos="fade-left">
-                    <h3 class="text-2xl font-bold mb-8">أرسل رسالة</h3>
-                    
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block mb-2 text-lg">الاسم الكامل</label>
-                                <input type="text" id="name" class="w-full px-5 py-4 bg-white bg-opacity-10 border border-white border-opacity-30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white text-lg" placeholder="أدخل اسمك" required>
-                            </div>
-                            
-                            <div>
-                                <label for="phone" class="block mb-2 text-lg">رقم الجوال</label>
-                                <input type="tel" id="phone" class="w-full px-5 py-4 bg-white bg-opacity-10 border border-white border-opacity-30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white text-lg" placeholder="أدخل رقم جوالك" required>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label for="email" class="block mb-2 text-lg">البريد الإلكتروني</label>
-                            <input type="email" id="email" class="w-full px-5 py-4 bg-white bg-opacity-10 border border-white border-opacity-30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white text-lg" placeholder="أدخل بريدك الإلكتروني">
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block mb-2 text-lg">الرسالة</label>
-                            <textarea id="message" rows="5" class="w-full px-5 py-4 bg-white bg-opacity-10 border border-white border-opacity-30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white text-lg" placeholder="اكتب رسالتك هنا..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="bg-accent hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-2xl w-full transition duration-300 text-lg">
-                            إرسال الرسالة
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-secondary text-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                <div>
+                <!-- Company Info - Full Width on Mobile, 2 cols on XL -->
+                <div class="xl:col-span-2">
+                    <!-- Logo and Brand -->
                     <div class="flex items-center mb-6">
-                        <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl">أو</div>
-                        <span class="mr-3 text-2xl font-bold">أساس الوسام</span>
+                        <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white font-bold text-2xl floating">
+                            أوس
+                        </div>
+                        <div class="mr-4">
+                            <span class="text-2xl font-bold block">أساس الوسام</span>
+                            <span class="text-accent text-sm">للأدوات الصحية والسباكة</span>
+                        </div>
                     </div>
-                    <p class="mb-6 text-lg">متخصصون في توفير أدوات السباكة والأدوات الصحية بجودة عالية وأسعار منافسة في الرياض.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
-                            <i class="fab fa-twitter text-xl"></i>
+                    
+                    <!-- Description -->
+                    <p class="mb-6 text-gray-300 leading-relaxed text-lg">
+                        رواد في توفير حلول السباكة والأدوات الصحية في الرياض منذ 2010. نقدم منتجات أصلية بجودة عالمية 
+                        وخدمة ما بعد البيع التي تجعلنا الخيار الأول للعملاء.
+                    </p>
+                    
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-green-500 bg-opacity-20 text-green-300 px-4 py-2 rounded-full text-sm border border-green-500 border-opacity-30">
+                            <i class="fas fa-shield-alt ml-1"></i> ضمان الجودة
+                        </div>
+                        <div class="bg-blue-500 bg-opacity-20 text-blue-300 px-4 py-2 rounded-full text-sm border border-blue-500 border-opacity-30">
+                            <i class="fas fa-truck ml-1"></i> توصيل سريع
+                        </div>
+                        <div class="bg-purple-500 bg-opacity-20 text-purple-300 px-4 py-2 rounded-full text-sm border border-purple-500 border-opacity-30">
+                            <i class="fas fa-headset ml-1"></i> دعم فني 24/7
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="mb-6">
+                        <h5 class="font-semibold mb-4 text-lg text-accent">تابعنا على</h5>
+                        <div class="flex space-x-3">
+                            <a href="#" class="social-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                                <i class="fab fa-twitter text-lg"></i>
+                            </a>
+                            <a href="#" class="social-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                                <i class="fab fa-instagram text-lg"></i>
+                            </a>
+                            <a href="#" class="social-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                                <i class="fab fa-facebook-f text-lg"></i>
+                            </a>
+                            <a href="#" class="social-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                                <i class="fab fa-youtube text-lg"></i>
+                            </a>
+                            <a href="#" class="social-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                                <i class="fab fa-linkedin-in text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="xl:col-span-1">
+                    <h4 class="font-bold text-xl mb-6 text-accent border-b border-accent pb-2">روابط سريعة</h4>
+                    <div class="space-y-1">
+                        <a href="#home" class="footer-link block">
+                            <i class="fas fa-home ml-2 text-primary"></i>
+                            الرئيسية
                         </a>
-                        <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
-                            <i class="fab fa-instagram text-xl"></i>
+                        <a href="#categories" class="footer-link block">
+                            <i class="fas fa-th-large ml-2 text-primary"></i>
+                            الفئات
                         </a>
-                        <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
-                            <i class="fab fa-facebook-f text-xl"></i>
+                        <a href="#products" class="footer-link block">
+                            <i class="fas fa-cube ml-2 text-primary"></i>
+                            المنتجات
+                        </a>
+                        <a href="#services" class="footer-link block">
+                            <i class="fas fa-cogs ml-2 text-primary"></i>
+                            خدماتنا
+                        </a>
+                        <a href="#about" class="footer-link block">
+                            <i class="fas fa-building ml-2 text-primary"></i>
+                            عن الشركة
+                        </a>
+                        <a href="#contact" class="footer-link block">
+                            <i class="fas fa-phone ml-2 text-primary"></i>
+                            اتصل بنا
                         </a>
                     </div>
                 </div>
                 
-                <div>
-                    <h4 class="font-bold text-xl mb-6">روابط سريعة</h4>
-                    <div class="space-y-4">
-                        <a href="#home" class="block hover:text-accent transition duration-300 text-lg">الرئيسية</a>
-                        <a href="#categories" class="block hover:text-accent transition duration-300 text-lg">فئات المنتجات</a>
-                        <a href="#products" class="block hover:text-accent transition duration-300 text-lg">أحدث المنتجات</a>
-                        <a href="#services" class="block hover:text-accent transition duration-300 text-lg">خدماتنا</a>
-                        <a href="#about" class="block hover:text-accent transition duration-300 text-lg">عنّا</a>
-                        <a href="#contact" class="block hover:text-accent transition duration-300 text-lg">تواصل معنا</a>
+                <!-- Product Categories -->
+                <div class="xl:col-span-1">
+                    <h4 class="font-bold text-xl mb-6 text-accent border-b border-accent pb-2">فئات المنتجات</h4>
+                    <div class="space-y-1">
+                        <a href="#" class="footer-link block">
+                            <i class="fas fa-faucet ml-2 text-primary"></i>
+                            خلاطات المياه
+                        </a>
+                        <a href="#" class="footer-link block">
+                            <i class="fas fa-pipe ml-2 text-primary"></i>
+                            مواسير ووصلات
+                        </a>
+                        <a href="#" class="footer-link block">
+                            <i class="fas fa-sink ml-2 text-primary"></i>
+                            أحواض ومغاسل
+                        </a>
+                        <a href="#" class="footer-link block">
+                            <i class="fas fa-toilet ml-2 text-primary"></i>
+                            مراحيض وقواعد
+                        </a>
+                        <a href="#" class="footer-link block">
+                            <i class="fas fa-shower ml-2 text-primary"></i>
+                            أدوات الاستحمام
+                        </a>
+                        <a href="#" class="footer-link block">
+                            <i class="fas fa-tools ml-2 text-primary"></i>
+                            ملحقات السباكة
+                        </a>
                     </div>
                 </div>
                 
-                <div>
-                    <h4 class="font-bold text-xl mb-6">فئات المنتجات</h4>
-                    <div class="space-y-4">
-                        <a href="#" class="block hover:text-accent transition duration-300 text-lg">خلاطات المياه</a>
-                        <a href="#" class="block hover:text-accent transition duration-300 text-lg">مواسير ووصلات</a>
-                        <a href="#" class="block hover:text-accent transition duration-300 text-lg">أحواض ومغاسل</a>
-                        <a href="#" class="block hover:text-accent transition duration-300 text-lg">مراحيض وقواعد</a>
-                        <a href="#" class="block hover:text-accent transition duration-300 text-lg">أدوات الاستحمام</a>
-                        <a href="#" class="block hover:text-accent transition duration-300 text-lg">ملحقات السباكة</a>
+                <!-- Contact & Newsletter -->
+                <div class="xl:col-span-2">
+                    <h4 class="font-bold text-xl mb-6 text-accent border-b border-accent pb-2">ابق على اطلاع</h4>
+                    
+                    <!-- Contact Info -->
+                    <div class="space-y-3 mb-8">
+                        <div class="contact-item flex items-start">
+                            <div class="w-10 h-10 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center ml-3 flex-shrink-0 mt-1">
+                                <i class="fas fa-map-marker-alt text-accent"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">العنوان</div>
+                                <div class="text-gray-300">الرياض، السعودية - شارع الملك فهد</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item flex items-center">
+                            <div class="w-10 h-10 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-phone text-accent"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">الهاتف</div>
+                                <div class="text-gray-300">+966 50 000 0000</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item flex items-center">
+                            <div class="w-10 h-10 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-envelope text-accent"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">البريد الإلكتروني</div>
+                                <div class="text-gray-300">info@asas-alwasam.com</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item flex items-center">
+                            <div class="w-10 h-10 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center ml-3 flex-shrink-0">
+                                <i class="fas fa-clock text-accent"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">ساعات العمل</div>
+                                <div class="text-gray-300">السبت - الخميس: 8ص - 10م | الجمعة: 4م - 10م</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold text-xl mb-6">اتصل بنا</h4>
-                    <div class="space-y-4 text-lg">
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-accent ml-3 mt-1"></i>
-                            <span>الرياض، السعودية - شارع الملك فهد</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-phone text-accent ml-3"></i>
-                            <span>+966 50 000 0000</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-accent ml-3"></i>
-                            <span>info@asas-alwasam.com</span>
-                        </div>
-                    </div>
+                    
+                 
                 </div>
             </div>
-            
-            <div class="border-t border-gray-600 mt-12 pt-8 text-center">
-                <p class="text-lg">© 2023 أساس الوسام للأدوات الصحية. جميع الحقوق محفوظة.</p>
+
+            <!-- Divider -->
+            <div class="border-t section-divider my-8"></div>
+
+
+            <!-- Divider -->
+            <div class="border-t section-divider my-8"></div>
+
+            <!-- Bottom Footer -->
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <!-- Copyright -->
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">
+                        © 2024 أساس الوسام للأدوات الصحية. جميع الحقوق محفوظة.
+                    </p>
+                </div>
+                
+                <!-- Additional Links -->
+                <div class="flex flex-wrap justify-center space-x-6 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-accent transition duration-300 text-sm">شروط الخدمة</a>
+                    <a href="#" class="text-gray-400 hover:text-accent transition duration-300 text-sm">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-accent transition duration-300 text-sm">سياسة الإرجاع</a>
+                    <a href="#" class="text-gray-400 hover:text-accent transition duration-300 text-sm">خريطة الموقع</a>
+                </div>
+                
+                <!-- Back to Top -->
+                <button onclick="scrollToTop()" class="bg-primary hover:bg-accent text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
             </div>
         </div>
     </footer>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Newsletter form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterButton = document.querySelector('.bg-accent');
+            const emailInput = document.querySelector('.newsletter-input');
+            
+            if (newsletterButton && emailInput) {
+                newsletterButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (emailInput.value) {
+                        alert('شكراً لك! تم الاشتراك في النشرة البريدية بنجاح.');
+                        emailInput.value = '';
+                    } else {
+                        alert('يرجى إدخال البريد الإلكتروني.');
+                    }
+                });
+            }
+        });
+    </script>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
