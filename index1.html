@@ -25,17 +25,37 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#116677',
-                        secondary: '#333333',
+                        primary: "#116778",
+                        secondary: '#116778',
                         accent: '#f59e0b',
                     },
                     fontFamily: {
                         'cairo': ['Cairo', 'sans-serif'],
+                    },
+                       animation: {
+                        'slide-in-right': 'slideInRight 1s ease-out',
+                        'slide-in-left': 'slideInLeft 1s ease-out',
+                        'fade-in-up': 'fadeInUp 1s ease-out',
+                    },
+                      keyframes: {
+                        slideInRight: {
+                            '0%': { transform: 'translateX(100%)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        slideInLeft: {
+                            '0%': { transform: 'translateX(-100%)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        fadeInUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
                     }
                 }
             }
         }
     </script>
+
     
     <style>
         html {
@@ -47,7 +67,7 @@
         }
         
         .hero-bg {
-            background: linear-gradient(rgba(17, 102, 119, 0.85), rgba(17, 102, 119, 0.9)), url('https://images.unsplash.com/photo-1600585154340-6f676d9fda60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background: #116778 , url('./asstes/img/cover.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -89,62 +109,308 @@
             background-position: center;
         }
     </style>
+      <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(17, 102, 119, 0.85) 0%, rgba(17, 102, 119, 0.7) 100%), url('./asstes/img/pexels-heyho-6207943.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .hero-image {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, -15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+    </style>
+     <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#116677',
+                        secondary: '#333333',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .category-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(17, 102, 119, 0.03) 0%, rgba(17, 102, 119, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .category-card:hover::before {
+            opacity: 1;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(17, 102, 119, 0.25);
+            border-color: #116677;
+        }
+        
+        .category-image {
+            transition: all 0.5s ease;
+        }
+        
+        .category-card:hover .category-image {
+            transform: scale(1.1);
+        }
+        
+        .icon-wrapper {
+            background: linear-gradient(135deg, #116677 0%, #0a4d5a 100%);
+            box-shadow: 0 10px 25px -5px rgba(17, 102, 119, 0.4);
+        }
+        
+        .floating-badge {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
 </head>
 <body class="font-cairo bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl">أو</div>
-                <span class="mr-3 text-2xl font-bold text-primary">أساس الوسام</span>
-            </div>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex space-x-10">
-                <a href="#home" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">الرئيسية</a>
-                <a href="#categories" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">الفئات</a>
-                <a href="#products" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">المنتجات</a>
-                <a href="#services" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">خدماتنا</a>
-                <a href="#about" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">عنّا</a>
-                <a href="#contact" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">تواصل معنا</a>
-            </div>
-            
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="lg:hidden text-primary">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white py-4 px-4 shadow-lg">
-            <a href="#home" class="block py-3 text-primary font-semibold text-lg border-b border-gray-100">الرئيسية</a>
-            <a href="#categories" class="block py-3 text-primary font-semibold text-lg border-b border-gray-100">الفئات</a>
-            <a href="#products" class="block py-3 text-primary font-semibold text-lg border-b border-gray-100">المنتجات</a>
-            <a href="#services" class="block py-3 text-primary font-semibold text-lg border-b border-gray-100">خدماتنا</a>
-            <a href="#about" class="block py-3 text-primary font-semibold text-lg border-b border-gray-100">عنّا</a>
-            <a href="#contact" class="block py-3 text-primary font-semibold text-lg">تواصل معنا</a>
-        </div>
-    </header>
+<!-- Header -->
+<header class="bg-white shadow-lg sticky top-0 z-50 py-4" dir="rtl">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-center relative">
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg text-white py-24 md:py-40">
-        <div class="container mx-auto px-4">
-            <div class="max-w-2xl" data-aos="fade-left">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">أساس الوسام — أدوات صحية وسباكة بالرياض</h1>
-                <p class="text-xl md:text-2xl mb-10 leading-relaxed">أفضل جودة وبأسعار منافسة — توصيل داخل الرياض — استشارات فنية مجانية</p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="https://wa.me/966500000000?text=مرحباً، أريد الاستفسار عن منتجاتكم" target="_blank" class="bg-accent hover:bg-amber-600 text-white font-bold py-4 px-10 rounded-lg inline-flex items-center justify-center transition duration-300 text-lg">
-                        <i class="fab fa-whatsapp ml-2 text-2xl"></i>
-                        تواصل عبر واتساب
-                    </a>
-                    <a href="#products" class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white font-bold py-4 px-10 rounded-lg inline-flex items-center justify-center transition duration-300 text-lg">
-                        <i class="fas fa-shopping-cart ml-2"></i>
-                        تصفح المنتجات
-                    </a>
-                </div>
+        <!-- Centered Nav Links -->
+        <div class="hidden lg:flex space-x-10 space-x-reverse">
+            <a href="#home" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">الرئيسية</a>
+            <a href="#categories" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">الفئات</a>
+            <a href="#products" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">المنتجات</a>
+            <a href="#services" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">خدماتنا</a>
+            <a href="#about" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">عنّا</a>
+            <a href="#contact" class="text-primary hover:text-secondary font-semibold text-lg transition duration-300">تواصل معنا</a>
+        </div>
+
+        <!-- Logo on Right -->
+        <div class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                <img src="./asstes/img/اساس الوسام logo.png" alt="logo">
             </div>
+            <span class="mr-3 text-2xl font-bold text-primary">أساس الوسام</span>
+        </div>
+
+        <!-- Button on Left -->
+        <div class="absolute left-4 top-1/2 -translate-y-1/2 hidden lg:flex">
+            <a href="https://wa.me/966500000000" target="_blank" 
+               class="bg-[#116778] text-white px-4 py-2 rounded-lg font-semibold shadow hover:bg-secondary transition duration-300">
+                اطلب الآن
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="lg:hidden text-primary absolute left-4">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white py-4 px-4 shadow-lg text-center">
+        <a href="#home" class="block py-3 text-primary font-semibold text-lg border-b border-gray-100">الرئيسية</a>
+        <a href="#categories" class="block py-3 text-primary font-semibold text-lg border-b border-gray-100">الفئات</a>
+        <a href="#products" class="block py-3 text-primary font-semibold text-lg border-b border-gray-100">المنتجات</a>
+        <a href="#services" class="block py-3 text-primary font-semibold text-lg border-b border-gray-100">خدماتنا</a>
+        <a href="#about" class="block py-3 text-primary font-semibold text-lg border-b border-gray-100">عنّا</a>
+        <a href="#contact" class="block py-3 text-primary font-semibold text-lg">تواصل معنا</a>
+    </div>
+</header>
+
+
+    
+    <!-- Enhanced Hero Section -->
+    <section id="home" class="hero-section text-white py-16 md:py-24 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+
+                 <!-- Content on the right with animation -->
+                <div class="lg:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class=" bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 md:p-12   border-opacity-20 ">
+                        <!-- Badge -->
+                        <div class="inline-block bg-accent text-white py-2 px-6 rounded-full font-bold mb-6 text-lg animate-pulse-glow">
+                            <i class="fas fa-star ml-2"></i>الرائدون في الأدوات الصحية
+                        </div>
+                        
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in-up">
+                            أساس الوسام — 
+                            <span class="text-accent">أدوات صحية</span> 
+                            وسباكة بالرياض
+                        </h1>
+                        
+                        <p class="text-xl md:text-2xl mb-8 leading-relaxed animate-fade-in-up" style="animation-delay: 0.3s;">
+                            نوفر لكم <span class="font-bold text-accent">أفضل جودة</span> وبأسعار منافسة — 
+                            <span class="font-bold">توصيل داخل الرياض</span> — 
+                            <span class="font-bold">استشارات فنية مجانية</span>
+                        </p>
+                        
+                        <!-- Features list -->
+                        <div class="mb-8 space-y-4 animate-fade-in-up" style="animation-delay: 0.5s;">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white ml-3">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span class="text-lg">منتجات أصلية ومرخصة من كبرى الشركات العالمية</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white ml-3">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span class="text-lg">ضمان على جميع المنتجات لمدة تصل إلى 5 سنوات</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white ml-3">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span class="text-lg">فريق فني متخصص لتركيب المنتجات واستشارات التصميم</span>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up" style="animation-delay: 0.7s;">
+                            <a href="https://wa.me/966500000000?text=مرحباً، أريد الاستفسار عن منتجاتكم" 
+                               target="_blank" 
+                               class="bg-accent hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-xl inline-flex items-center justify-center transition-all duration-300 text-lg transform hover:scale-105 pulse-glow">
+                                <i class="fab fa-whatsapp ml-2 text-2xl"></i>
+                                تواصل عبر واتساب
+                            </a>
+                            <a href="#products" 
+                               class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white font-bold py-4 px-8 rounded-xl inline-flex items-center justify-center transition-all duration-300 text-lg transform hover:scale-105">
+                                <i class="fas fa-shopping-cart ml-2"></i>
+                                تصفح المنتجات
+                            </a>
+                        </div>
+                        
+                        <!-- Trust indicators -->
+                        <div class="flex flex-wrap items-center justify-center mt-8 pt-6 border-t border-white border-opacity-20 animate-fade-in-up" style="animation-delay: 0.9s;">
+                            <div class="flex items-center mx-4 my-2">
+                                <i class="fas fa-shield-alt text-accent ml-2"></i>
+                                <span class="text-sm">ضمان الجودة</span>
+                            </div>
+                            <div class="flex items-center mx-4 my-2">
+                                <i class="fas fa-truck text-accent ml-2"></i>
+                                <span class="text-sm">توصيل مجاني</span>
+                            </div>
+                            <div class="flex items-center mx-4 my-2">
+                                <i class="fas fa-headset text-accent ml-2"></i>
+                                <span class="text-sm">دعم فني 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image on the left with animation -->
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-image  relative">
+                        <img src="./asstes/img/اساس الوسام.jpg" 
+                             alt="أدوات صحية وسباكة من أساس الوسام" 
+                             class="w-full h-[500px] rounded-2xl object-cover">
+                        
+                     
+                    </div>
+                    
+                    <!-- Stats under image -->
+                    <!-- <div class="grid grid-cols-3 gap-4 mt-8">
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-4 text-center">
+                            <div class="text-2xl font-bold">+500</div>
+                            <div class="text-sm">منتج متنوع</div>
+                        </div>
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-4 text-center">
+                            <div class="text-2xl font-bold">+10</div>
+                            <div class="text-sm">سنوات خبرة</div>
+                        </div>
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-4 text-center">
+                            <div class="text-2xl font-bold">24/7</div>
+                            <div class="text-sm">دعم فني</div>
+                        </div>
+                    </div> -->
+                </div>
+                
+               
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#categories" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </section>
+
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        });
+    </script>
 
     <!-- Stats Section -->
     <section class="py-16 bg-white">
@@ -170,87 +436,318 @@
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section id="categories" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-4 text-primary" data-aos="fade-up">فئات المنتجات</h2>
-            <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up">نوفر لكم مجموعة شاملة من أدوات السباكة والأدوات الصحية بجودة عالية وأسعار منافسة</p>
+     <!-- Enhanced Categories Section -->
+    <section id="categories" class="py-24 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-72 h-72 bg-primary opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent opacity-5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20" data-aos="fade-up">
+                <div class="inline-flex items-center bg-primary bg-opacity-10 text-primary px-6 py-3 rounded-full font-semibold text-lg mb-6">
+                    <i class="fas fa-layer-group ml-2"></i>
+                    تصفح مجموعتنا المميزة
+                </div>
+                <h2 class="text-5xl font-bold text-primary mb-6">فئات المنتجات</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    اكتشف مجموعتنا الشاملة من <span class="text-primary font-semibold">أدوات السباكة والأدوات الصحية</span> 
+                    بجودة عالمية وأسعار تنافسية. نوفر كل ما تحتاجه لمشاريعك بضمان يصل إلى 5 سنوات
+                </p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Category 1 -->
-                <div class="category-card bg-white p-8 rounded-2xl shadow-md text-center transition duration-500" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center text-white mb-6">
-                        <i class="fas fa-faucet text-4xl"></i>
+            <!-- Categories Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                
+                <!-- Category 1 - خلاطات المياه -->
+                <div class="category-card group rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 h-48">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25856cd63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                             alt="خلاطات المياه الحديثة" 
+                             class="category-image w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 left-4 floating-badge bg-accent text-white py-2 px-4 rounded-full font-bold text-sm">
+                            <i class="fas fa-bolt ml-1"></i>الأكثر مبيعاً
+                        </div>
                     </div>
-                    <h3 class="font-bold text-2xl text-primary mb-4">خلاطات المياه</h3>
-                    <p class="text-gray-600 mb-6">خلاطات حديثة بتصاميم عصرية ومتانة عالية من أفضل العلامات التجارية العالمية</p>
-                    <a href="#products" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded-lg transition duration-300">
-                        عرض المنتجات
-                    </a>
+                    
+                    <div class="flex items-start mb-4">
+                        <div class="icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center text-white ml-4 flex-shrink-0">
+                            <i class="fas fa-faucet text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-primary mb-2">خلاطات المياه</h3>
+                            <div class="flex items-center text-amber-500 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-500 text-sm mr-2">(4.7)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        خلاطات مياه بتصاميم عصرية من النحاس المطلي بالكروم، مقاومة للصدأ والتآكل، 
+                        مع تقنية توفير المياه وتصميمات تناسب جميع الأذواق.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-box ml-1"></i> 45 منتج متنوع
+                        </div>
+                        <a href="#products" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center group-hover:shadow-lg">
+                            <span>استعرض المنتجات</span>
+                            <i class="fas fa-arrow-left mr-2 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <!-- Category 2 -->
-                <div class="category-card bg-white p-8 rounded-2xl shadow-md text-center transition duration-500" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center text-white mb-6">
-                        <i class="fas fa-pipe text-4xl"></i>
+                <!-- Category 2 - مواسير ووصلات -->
+                <div class="category-card group rounded-3xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 h-48">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             alt="مواسير ووصلات السباكة" 
+                             class="category-image w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <h3 class="font-bold text-2xl text-primary mb-4">مواسير ووصلات</h3>
-                    <p class="text-gray-600 mb-6">مواسير بلاستيكية ومعدنية بجميع المقاسات مع وصلات وتوصيلات متنوعة</p>
-                    <a href="#products" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded-lg transition duration-300">
-                        عرض المنتجات
-                    </a>
+                    
+                    <div class="flex items-start mb-4">
+                        <div class="icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center text-white ml-4 flex-shrink-0">
+                            <i class="fas fa-pipe text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-primary mb-2">مواسير ووصلات</h3>
+                            <div class="flex items-center text-amber-500 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-500 text-sm mr-2">(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        مواسير PVC وPPR بجميع المقاسات، مع وصلات وتوصيلات متنوعة مقاومة للضغط العالي 
+                        والعوامل الجوية، مثالية للمشاريع السكنية والتجارية.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-box ml-1"></i> 32 منتج متنوع
+                        </div>
+                        <a href="#products" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center group-hover:shadow-lg">
+                            <span>استعرض المنتجات</span>
+                            <i class="fas fa-arrow-left mr-2 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <!-- Category 3 -->
-                <div class="category-card bg-white p-8 rounded-2xl shadow-md text-center transition duration-500" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center text-white mb-6">
-                        <i class="fas fa-sink text-4xl"></i>
+                <!-- Category 3 - أحواض ومغاسل -->
+                <div class="category-card group rounded-3xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 h-48">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" 
+                             alt="أحواض ومغاسل الحمام" 
+                             class="category-image w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 left-4 floating-badge bg-green-500 text-white py-2 px-4 rounded-full font-bold text-sm">
+                            <i class="fas fa-leaf ml-1"></i>صديق للبيئة
+                        </div>
                     </div>
-                    <h3 class="font-bold text-2xl text-primary mb-4">أحواض ومغاسل</h3>
-                    <p class="text-gray-600 mb-6">أحواض ستانلس ستيل، سيراميك، وأحواض رخامية بتصاميم فاخرة وعملية</p>
-                    <a href="#products" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded-lg transition duration-300">
-                        عرض المنتجات
-                    </a>
+                    
+                    <div class="flex items-start mb-4">
+                        <div class="icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center text-white ml-4 flex-shrink-0">
+                            <i class="fas fa-sink text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-primary mb-2">أحواض ومغاسل</h3>
+                            <div class="flex items-center text-amber-500 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-500 text-sm mr-2">(4.9)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        أحواض ستانلس ستيل، سيراميك، وأحواض رخامية بتصاميم فاخرة وعملية، 
+                        مقاومة للخدوش والبقع، مع خيارات متنوعة تناسب جميع مساحات الحمامات.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-box ml-1"></i> 28 منتج متنوع
+                        </div>
+                        <a href="#products" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center group-hover:shadow-lg">
+                            <span>استعرض المنتجات</span>
+                            <i class="fas fa-arrow-left mr-2 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <!-- Category 4 -->
-                <div class="category-card bg-white p-8 rounded-2xl shadow-md text-center transition duration-500" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center text-white mb-6">
-                        <i class="fas fa-toilet text-4xl"></i>
+                <!-- Category 4 - مراحيض وقواعد -->
+                <div class="category-card group rounded-3xl p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 h-48">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             alt="مراحيض وقواعد الحمام" 
+                             class="category-image w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <h3 class="font-bold text-2xl text-primary mb-4">مراحيض وقواعد</h3>
-                    <p class="text-gray-600 mb-6">قواعد تواليت حديثة بتقنية التوفير المائي وتصاميم تناسب جميع الأذواق</p>
-                    <a href="#products" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded-lg transition duration-300">
-                        عرض المنتجات
-                    </a>
+                    
+                    <div class="flex items-start mb-4">
+                        <div class="icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center text-white ml-4 flex-shrink-0">
+                            <i class="fas fa-toilet text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-primary mb-2">مراحيض وقواعد</h3>
+                            <div class="flex items-center text-amber-500 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-500 text-sm mr-2">(4.6)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        قواعد تواليت حديثة بتقنية التوفير المائي المزدوج، مصنوعة من السيراميك عالي الجودة، 
+                        مع تصميمات مدمجة وأنيقة تناسب جميع مساحات الحمامات.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-box ml-1"></i> 22 منتج متنوع
+                        </div>
+                        <a href="#products" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center group-hover:shadow-lg">
+                            <span>استعرض المنتجات</span>
+                            <i class="fas fa-arrow-left mr-2 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <!-- Category 5 -->
-                <div class="category-card bg-white p-8 rounded-2xl shadow-md text-center transition duration-500" data-aos="fade-up" data-aos-delay="500">
-                    <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center text-white mb-6">
-                        <i class="fas fa-shower text-4xl"></i>
+                <!-- Category 5 - أدوات الاستحمام -->
+                <div class="category-card group rounded-3xl p-8" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 h-48">
+                        <img src="https://images.unsplash.com/photo-1584622781564-808bc6c66e44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             alt="أدوات الاستحمام والدش" 
+                             class="category-image w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 left-4 floating-badge bg-purple-500 text-white py-2 px-4 rounded-full font-bold text-sm">
+                            <i class="fas fa-gem ml-1"></i>تصميم فاخر
+                        </div>
                     </div>
-                    <h3 class="font-bold text-2xl text-primary mb-4">أدوات الاستحمام</h3>
-                    <p class="text-gray-600 mb-6">دش استحمام، خلاطات بانيو، وملحقات حمام كاملة بجودة فائقة</p>
-                    <a href="#products" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded-lg transition duration-300">
-                        عرض المنتجات
-                    </a>
+                    
+                    <div class="flex items-start mb-4">
+                        <div class="icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center text-white ml-4 flex-shrink-0">
+                            <i class="fas fa-shower text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-primary mb-2">أدوات الاستحمام</h3>
+                            <div class="flex items-center text-amber-500 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-500 text-sm mr-2">(4.8)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        دش استحمام، خلاطات بانيو، وملحقات حمام كاملة بجودة فائقة، مع تقنيات 
+                        التدليك المائي وتوفير الطاقة، لتحويل حمامك إلى واحة استرخاء حقيقية.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-box ml-1"></i> 38 منتج متنوع
+                        </div>
+                        <a href="#products" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center group-hover:shadow-lg">
+                            <span>استعرض المنتجات</span>
+                            <i class="fas fa-arrow-left mr-2 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <!-- Category 6 -->
-                <div class="category-card bg-white p-8 rounded-2xl shadow-md text-center transition duration-500" data-aos="fade-up" data-aos-delay="600">
-                    <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center text-white mb-6">
-                        <i class="fas fa-tools text-4xl"></i>
+                <!-- Category 6 - ملحقات السباكة -->
+                <div class="category-card group rounded-3xl p-8" data-aos="fade-up" data-aos-delay="600">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 h-48">
+                        <img src="https://images.unsplash.com/photo-1581093458791-8a6b6d47d0b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             alt="ملحقات وأدوات السباكة" 
+                             class="category-image w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <h3 class="font-bold text-2xl text-primary mb-4">ملحقات السباكة</h3>
-                    <p class="text-gray-600 mb-6">أدوات تركيب، صمامات، مفاصل، وكل ما تحتاجه لعمليات السباكة</p>
-                    <a href="#products" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded-lg transition duration-300">
-                        عرض المنتجات
+                    
+                    <div class="flex items-start mb-4">
+                        <div class="icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center text-white ml-4 flex-shrink-0">
+                            <i class="fas fa-tools text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-primary mb-2">ملحقات السباكة</h3>
+                            <div class="flex items-center text-amber-500 mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-500 text-sm mr-2">(4.9)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        أدوات تركيب، صمامات، مفاصل، وكل ما تحتاجه لعمليات السباكة والإصلاح، 
+                        مع ضمان الجودة والمتانة لجميع القطع والملحقات.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-box ml-1"></i> 65 منتج متنوع
+                        </div>
+                        <a href="#products" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center group-hover:shadow-lg">
+                            <span>استعرض المنتجات</span>
+                            <i class="fas fa-arrow-left mr-2 transition-transform duration-300 group-hover:-translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="700">
+                <div class="bg-gradient-to-l from-primary to-secondary rounded-3xl p-12 text-white">
+                    <h3 class="text-3xl font-bold mb-4">لا تجد ما تبحث عنه؟</h3>
+                    <p class="text-xl mb-8 opacity-90">لدينا المزيد من المنتجات والتصميمات. تواصل معنا للحصول على استشارة مجانية</p>
+                    <a href="#contact" class="bg-accent hover:bg-amber-600 text-white font-bold py-4 px-12 rounded-xl inline-flex items-center transition-all duration-300 transform hover:scale-105 text-lg">
+                        <i class="fas fa-headset ml-2 text-xl"></i>
+                        احصل على استشارة مجانية
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        });
+    </script>
 
     <!-- Products Section -->
     <section id="products" class="py-20 bg-white">
