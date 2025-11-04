@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أساس الوسام للأدوات الصحية – الرياض، السعودية</title>
+    <title>أساس الوسام للأدوات الصحية بالطائف –  محل سباكة وادوات صحية بالطائف</title>
     <meta name="description" content="متجر أساس الوسام للأدوات الصحية والسباكة في الرياض - أفضل جودة وبأسعار منافسة - توصيل داخل الرياض">
     
     <!-- Tailwind CSS -->
@@ -19,6 +19,7 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./asstes/css/style.css">
     
     <script>
         tailwind.config = {
@@ -57,485 +58,9 @@
     </script>
 
     
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Cairo', sans-serif;
-        }
-        
-        .hero-bg {
-            background: #116778 , url('./asstes/img/cover.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .category-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .product-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .swiper-slide {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .testimonial-card {
-            background: linear-gradient(135deg, #116677 0%, #0a4d5a 100%);
-        }
-        
-        .contact-bg {
-            background: linear-gradient(rgba(17, 102, 119, 0.9), rgba(17, 102, 119, 0.9)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
-      <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-        }
-        
-        .hero-section {
-            background: linear-gradient(135deg, rgba(17, 102, 119, 0.85) 0%, rgba(17, 102, 119, 0.7) 100%), url('./asstes/img/pexels-heyho-6207943.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .hero-image {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            border-radius: 20px;
-            overflow: hidden;
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translate(0, 0px); }
-            50% { transform: translate(0, -15px); }
-            100% { transform: translate(0, -0px); }
-        }
-        
-        .pulse-glow {
-            animation: pulse-glow 2s infinite;
-        }
-        
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
-        }
-    </style>
-     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#116677',
-                        secondary: '#333333',
-                        accent: '#116778',
-                    },
-                    fontFamily: {
-                        'cairo': ['Cairo', 'sans-serif'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+ 
     
-    <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-        }
-        
-        .category-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .category-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(17, 102, 119, 0.03) 0%, rgba(17, 102, 119, 0.1) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .category-card:hover::before {
-            opacity: 1;
-        }
-        
-        .category-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(17, 102, 119, 0.25);
-            border-color: #116677;
-        }
-        
-        .category-image {
-            transition: all 0.5s ease;
-        }
-        
-        .category-card:hover .category-image {
-            transform: scale(1.1);
-        }
-        
-        .icon-wrapper {
-            background: linear-gradient(135deg, #116677 0%, #0a4d5a 100%);
-            box-shadow: 0 10px 25px -5px rgba(17, 102, 119, 0.4);
-        }
-        
-        .floating-badge {
-            animation: float 4s ease-in-out infinite;
-        }
-    </style>
-      <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#116677',
-                        secondary: '#333333',
-                        accent: '#116778',
-                    },
-                    fontFamily: {
-                        'cairo': ['Cairo', 'sans-serif'],
-                    },
-                    animation: {
-                        'zoom-in': 'zoomIn 0.3s ease-out',
-                        'fade-in': 'fadeIn 0.3s ease-out',
-                        'slide-in': 'slideIn 0.4s ease-out',
-                    },
-                    keyframes: {
-                        zoomIn: {
-                            '0%': { transform: 'scale(0.8)', opacity: '0' },
-                            '100%': { transform: 'scale(1)', opacity: '1' },
-                        },
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideIn: {
-                            '0%': { transform: 'translateY(30px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     
-    <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-        }
-        
-        .product-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(17, 102, 119, 0.25);
-            border-color: #116677;
-        }
-        
-        .product-image {
-            transition: all 0.5s ease;
-        }
-        
-        .product-card:hover .product-image {
-            transform: scale(1.1);
-        }
-        
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-        
-        .lightbox.active {
-            display: flex;
-            animation: fadeIn 0.3s ease-out;
-        }
-        
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90%;
-            animation: zoomIn 0.3s ease-out;
-        }
-        
-        .lightbox-nav {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .lightbox-nav:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        
-        .product-badge {
-            background: linear-gradient(135deg, #f59e0b 0%, #e6900b 100%);
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-    </style>
-     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#116677',
-                        secondary: '#333333',
-                        accent: '#116778',
-                    },
-                    fontFamily: {
-                        'cairo': ['Cairo', 'sans-serif'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        pulseGlow: {
-                            '0%, 100%': { 
-                                'box-shadow': '0 0 20px rgba(17, 102, 119, 0.3)',
-                                'transform': 'scale(1)'
-                            },
-                            '50%': { 
-                                'box-shadow': '0 0 40px rgba(17, 102, 119, 0.6)',
-                                'transform': 'scale(1.05)'
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-        }
-        
-        .about-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .about-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(17, 102, 119, 0.25);
-            border-color: #116677;
-        }
-        
-        .icon-wrapper {
-            background: linear-gradient(135deg, #116677 0%, #0a4d5a 100%);
-            box-shadow: 0 10px 25px -5px rgba(17, 102, 119, 0.4);
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            right: -20px;
-            top: 24px;
-            width: 40px;
-            height: 2px;
-            background: #116677;
-        }
-        
-        .timeline-item:last-child::before {
-            display: none;
-        }
-        
-        .floating-badge {
-            animation: float 4s ease-in-out infinite;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #116677 0%, #0a4d5a 100%);
-        }
-    </style>
-        <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#116677',
-                        secondary: '#333333',
-                        accent: '#116778',
-                    },
-                    fontFamily: {
-                        'cairo': ['Cairo', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-        }
-        
-        .footer-bg {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .footer-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(135deg, rgba(17, 102, 119, 0.1) 0%, rgba(17, 102, 119, 0.05) 100%);
-            border-radius: 50%;
-            filter: blur(60px);
-        }
-        
-        .footer-bg::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 200px;
-            height: 200px;
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
-            border-radius: 50%;
-            filter: blur(60px);
-        }
-        
-        .social-icon {
-            background: rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .social-icon:hover {
-            background: #f59e0b;
-            transform: translateY(-3px);
-            border-color: #f59e0b;
-        }
-        
-        .footer-link {
-            transition: all 0.3s ease;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .footer-link:hover {
-            color: #f59e0b;
-            padding-right: 10px;
-        }
-        
-        .footer-link:last-child {
-            border-bottom: none;
-        }
-        
-        .contact-item {
-            transition: all 0.3s ease;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .contact-item:hover {
-            color: #f59e0b;
-            transform: translateX(-5px);
-        }
-        
-        .contact-item:last-child {
-            border-bottom: none;
-        }
-        
-        .newsletter-input {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .newsletter-input:focus {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: #f59e0b;
-            box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }
-        
-        .section-divider {
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-    </style>
 </head>
 <body class="font-cairo bg-gray-50">
 <!-- Header -->
@@ -1464,7 +989,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <span class="text-primary font-bold text-xl">199 ر.س</span>
+                        
                     </div>
                     
                     <div class="flex space-x-3">
@@ -1517,7 +1042,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <span class="text-primary font-bold text-xl">45 ر.س</span>
+                   
                     </div>
                     
                    <div class="flex space-x-3">
@@ -1573,7 +1098,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <span class="text-primary font-bold text-xl">320 ر.س</span>
+                    
                     </div>
                     
                      <div class="flex space-x-3">
@@ -1626,7 +1151,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <span class="text-primary font-bold text-xl">450 ر.س</span>
+                      
                     </div>
                     
                    <div class="flex space-x-3">
