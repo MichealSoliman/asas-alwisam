@@ -117,106 +117,112 @@
 
 
     
-    <!-- Enhanced Hero Section -->
-    <section id="home" class="hero-section text-white py-16 md:py-24 overflow-hidden">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center justify-between">
+<!-- Enhanced Hero Section with Background Image and Blur Overlay -->
+<section id="home" 
+    class="hero-section relative text-white py-16 md:py-24 overflow-hidden"
+    style="background-image: url('./asstes/img/pexels-heyho-6207943.jpg'); background-size: cover; background-position: center;">
+    
+    <!-- ضباب شفاف فوق الصورة -->
+    <div class="absolute inset-0 bg-[#266773]/30 backdrop-blur-sm"></div>
 
-                 <!-- Content on the right with animation -->
-                <div class="lg:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class=" bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 md:p-12   border-opacity-20 ">
-                        <!-- Badge -->
-                        <div class="inline-block bg-[#ed970c] text-white py-2 px-6 rounded-full font-bold mb-6 text-lg animate-pulse-glow">
-                            <i class="fas fa-star ml-2"></i>الرائدون في الأدوات الصحية
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+
+            <!-- المحتوى -->
+            <div class="lg:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="bg-[#116778]/30 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20">
+                    <!-- Badge -->
+                    <div class="inline-block bg-[#ed970c] text-white py-2 px-6 rounded-full font-bold mb-6 text-lg animate-pulse-glow">
+                        <i class="fas fa-star ml-2"></i>الرائدون في الأدوات الصحية
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in-up">
+                        أساس الوسام — 
+                        <span class="text-[#ed970c]">أدوات صحية</span> 
+                        وسباكة بالطائف
+                    </h1>  
+
+                    <p class="text-xl md:text-2xl mb-8 leading-relaxed animate-fade-in-up" style="animation-delay: 0.3s;">
+                        نوفر لكم <span class="font-bold text-[#ed970c]">أفضل جودة</span> وبأسعار منافسة — 
+                        <span class="font-bold">توصيل داخل الطائف</span> — 
+                        <span class="font-bold">استشارات فنية مجانية</span>
+                    </p>
+
+                    <!-- Features -->
+                    <div class="mb-8 space-y-4 animate-fade-in-up" style="animation-delay: 0.5s;">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-[#ed970c] rounded-full flex items-center justify-center text-white ml-3">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <span class="text-lg">منتجات أصلية ومرخصة من كبرى الشركات العالمية</span>
                         </div>
-                        
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in-up">
-                            أساس الوسام — 
-                            <span class="text-[#ed970c]">أدوات صحية</span> 
-                            وسباكة بالطائف
-                        </h1>  
-                        
-                        <p class="text-xl md:text-2xl mb-8 leading-relaxed animate-fade-in-up" style="animation-delay: 0.3s;">
-                            نوفر لكم <span class="font-bold text-[#ed970c]">أفضل جودة</span> وبأسعار منافسة — 
-                            <span class="font-bold">توصيل داخل الطائف</span> — 
-                            <span class="font-bold">استشارات فنية مجانية</span>
-                        </p>
-                        
-                        <!-- Features list -->
-                        <div class="mb-8 space-y-4 animate-fade-in-up" style="animation-delay: 0.5s;">
-                            <div class="flex items-center">
-                                <div class="w-8 h-8 bg-[#ed970c] rounded-full flex items-center justify-center text-white ml-3">
-                                    <i class="fas fa-check text-sm"></i>
-                                </div>
-                                <span class="text-lg">منتجات أصلية ومرخصة من كبرى الشركات العالمية</span>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-[#ed970c] rounded-full flex items-center justify-center text-white ml-3">
+                                <i class="fas fa-check text-sm"></i>
                             </div>
-                            <div class="flex items-center">
-                                <div class="w-8 h-8 bg-[#ed970c] rounded-full flex items-center justify-center text-white ml-3">
-                                    <i class="fas fa-check text-sm"></i>
-                                </div>
-                                <span class="text-lg">ضمان على جميع المنتجات لمدة تصل إلى 5 سنوات</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-8 h-8 bg-[#ed970c] rounded-full flex items-center justify-center text-white ml-3">
-                                    <i class="fas fa-check text-sm"></i>
-                                </div>
-                                <span class="text-lg">فريق فني متخصص لتركيب المنتجات واستشارات التصميم</span>
-                            </div>
+                            <span class="text-lg">ضمان على جميع المنتجات لمدة تصل إلى 5 سنوات</span>
                         </div>
-                        
-                        <!-- CTA Buttons -->
-                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up" style="animation-delay: 0.7s;">
-                            <a href="https://wa.me/966557351338"
-                               target="_blank" 
-                               class="bg-[#266773] text-white hover:bg-white hover:text-primary ml-3 font-bold py-4 px-8 rounded-xl inline-flex items-center justify-center transition-all duration-300 text-lg transform hover:scale-105" >
-                                <i class="fab fa-whatsapp ml-2 text-2xl"></i>
-                                تواصل عبر واتساب
-                            </a>
-                            <a href="#products" 
-                               class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white font-bold py-4 px-8 rounded-xl inline-flex items-center justify-center transition-all duration-300 text-lg transform hover:scale-105">
-                                <i class="fas fa-shopping-cart ml-2"></i>
-                                تصفح المنتجات
-                            </a>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-[#ed970c] rounded-full flex items-center justify-center text-white ml-3">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <span class="text-lg">فريق فني متخصص لتركيب المنتجات واستشارات التصميم</span>
                         </div>
-                        
-                        <!-- Trust indicators -->
-                        <div class="flex flex-wrap items-center justify-center mt-8 pt-6 border-t border-white border-opacity-20 animate-fade-in-up" style="animation-delay: 0.9s;">
-                            <div class="flex items-center mx-4 my-2">
-                                <i class="fas fa-shield-alt text-[#ed970c] ml-2"></i>
-                                <span class="text-sm">ضمان الجودة</span>
-                            </div>
-                            <div class="flex items-center mx-4 my-2">
-                                <i class="fas fa-truck text-[#ed970c] ml-2"></i>
-                                <span class="text-sm">توصيل مجاني</span>
-                            </div>
-                            <div class="flex items-center mx-4 my-2">
-                                <i class="fas fa-headset text-[#ed970c] ml-2"></i>
-                                <span class="text-sm">دعم فني 24/7</span>
-                            </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up" style="animation-delay: 0.7s;">
+                        <a href="https://wa.me/966557351338"
+                           target="_blank" 
+                           class="bg-[#266773] text-white hover:bg-white hover:text-primary ml-3 font-bold py-4 px-8 rounded-xl inline-flex items-center justify-center transition-all duration-300 text-lg transform hover:scale-105" >
+                            <i class="fab fa-whatsapp ml-2 text-2xl"></i>
+                            تواصل عبر واتساب
+                        </a>
+                        <a href="#products" 
+                           class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white font-bold py-4 px-8 rounded-xl inline-flex items-center justify-center transition-all duration-300 text-lg transform hover:scale-105">
+                            <i class="fas fa-shopping-cart ml-2"></i>
+                            تصفح المنتجات
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="flex flex-wrap items-center justify-center mt-8 pt-6 border-t border-white/20 animate-fade-in-up" style="animation-delay: 0.9s;">
+                        <div class="flex items-center mx-4 my-2">
+                            <i class="fas fa-shield-alt text-[#ed970c] ml-2"></i>
+                            <span class="text-sm">ضمان الجودة</span>
+                        </div>
+                        <div class="flex items-center mx-4 my-2">
+                            <i class="fas fa-truck text-[#ed970c] ml-2"></i>
+                            <span class="text-sm">توصيل مجاني</span>
+                        </div>
+                        <div class="flex items-center mx-4 my-2">
+                            <i class="fas fa-headset text-[#ed970c] ml-2"></i>
+                            <span class="text-sm">دعم فني 24/7</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Image on the left with animation -->
-                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="hero-image  relative">
-                        <img src="./asstes/img/اساس الوسام.jpg" 
-                             alt="أدوات صحية وسباكة من أساس الوسام" 
-                             class="w-full h-[500px] rounded-2xl object-cover">
-                    </div>
-                </div>
-                
-               
             </div>
+
+            <!-- الصورة -->
+            <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-image relative">
+                    <img src="./asstes/img/اساس الوسام.jpg" 
+                         alt="أدوات صحية وسباكة من أساس الوسام" 
+                         class="w-full h-[500px] rounded-2xl object-cover">
+                </div>
+            </div>
+
         </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#categories" class="text-white text-2xl">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </section>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <a href="#categories" class="text-white text-2xl">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
+</section>
+
 
 
 
